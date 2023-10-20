@@ -3,11 +3,13 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Loader from "./Loader";
+// import process.env from "./"
 
 const About = () => {
   const [post, setPost] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const { repositoryName } = useParams();
+//   const { GITHUB_API_KEY } = process.env;
 
   const postURL = `https://api.github.com/graphql`;
   const query = `
