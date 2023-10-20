@@ -9,7 +9,7 @@ const About = () => {
   const [post, setPost] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const { repositoryName } = useParams();
-//   const { GITHUB_API_KEY } = process.env;
+  const { GITHUB_API_KEY } = process.env;
 
   const postURL = `https://api.github.com/graphql`;
   const query = `
@@ -31,7 +31,7 @@ const About = () => {
     `;
 
   const headers = {
-    Authorization: `Bearer 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`,
+    Authorization: `Bearer ${GITHUB_API_KEY}`,
     "Content-Type": "application/json",
   };
 

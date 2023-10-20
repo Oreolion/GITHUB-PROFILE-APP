@@ -11,6 +11,8 @@ function Home() {
   const [repositories, setRepositories] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
+  const { GITHUB_API_KEY } = process.env;
+
 
   const baseURL = "https://api.github.com/graphql";
   const query = `
@@ -33,7 +35,7 @@ function Home() {
     `;
 
   const headers = {
-    Authorization: `Bearer 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`,
+    Authorization: `Bearer ${GITHUB_API_KEY}`,
     "Content-Type": "application/json",
   };
 
