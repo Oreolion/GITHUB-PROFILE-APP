@@ -1,9 +1,7 @@
-// import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Octokit } from "octokit";
-
 import Loader from "./Loader";
 
 const About = () => {
@@ -47,13 +45,20 @@ const About = () => {
               </p>
             </article>
             <article className="item">
+              <h3>Repository Language:</h3>
+              <p style={{ background: "grey", padding: "1rem" }}>
+                {" "}
+                {aboutPost.language}
+              </p>
+            </article>
+            <article className="item">
               <h3>Date Created:</h3>
               <p style={{ background: "grey", padding: "1rem" }}>
                 {" "}
                 {aboutPost.created_at}
               </p>
             </article>
-            <article>
+            <article className="item">
               <h3>Date Pushed: </h3>
               <p style={{ background: "grey", padding: "1rem" }}>
                 {aboutPost.updated_at}

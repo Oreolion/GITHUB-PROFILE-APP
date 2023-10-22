@@ -7,7 +7,6 @@ class ErrorBoundary extends Component {
   }
 
   static getDerivedStateFromError(error) {
-    // Update state so the next render will show the fallback UI.
     console.log(error);
     return { hasError: true };
   }
@@ -15,21 +14,19 @@ class ErrorBoundary extends Component {
   componentDidCatch(error, errorInfo) {
     console.log(error);
     console.log(errorInfo);
-    // You can also log the error to an error reporting service
   }
 
   render() {
     if (this.state.hasError) {
-      // You can render any custom fallback UI
       return (
         <section style={{ padding: 30 }}>
-          <h1 style={{ color: "red" }}>OOPS!!! Something went wrong...</h1>
+          <h1 style={{ color: "red" }}>OOPS!!! Something went wrong... such an unexpected error... </h1>
           <button
-            //   onClick={}
             style={{ padding: 10, color: "green" }}
           >
+            <a href="/">&#60; Go back</a>
             {" "}
-            &#60; Go back
+            
           </button>
         </section>
       );

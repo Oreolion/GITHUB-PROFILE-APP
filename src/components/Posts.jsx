@@ -14,9 +14,7 @@ function Posts() {
 
   const fetchUser = async () => {
     try {
-      const response = await octokit.request(
-        `GET /users/oreolion/repos`
-      );
+      const response = await octokit.request(`GET /users/oreolion/repos`);
       console.log(response);
       const data = await response.data;
       console.log(data);
@@ -28,18 +26,13 @@ function Posts() {
     }
   };
 
-  
   useEffect(() => {
-   
     fetchUser();
   }, []);
-
- 
 
   const handleClick = (repositoryName) => {
     navigate(repositoryName);
   };
-
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -78,8 +71,6 @@ function Posts() {
 
         <PiArrowFatLinesUpFill className="up-arrow" onClick={scrollToTop} />
       </section>
-      
-     
     </>
   );
 }
