@@ -1,0 +1,7 @@
+## Libraries required for this project
+
+React Router Library
+React Router Dom Library
+Octokit Library
+Error Boundary Library
+React icons Library
