@@ -18,7 +18,7 @@
 
 p {
   font-size: 1.8rem;
-  color: goldenrod;
+  color: #444;
   margin-bottom: 1rem;
   font-weight: bolder;
 }
@@ -52,15 +52,15 @@ h2 {
 }
 
 h3 {
-  background: rgb(240, 140, 233);
+  background: #799e79;
   margin-bottom: 1rem;
   border-top-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   cursor: pointer;
   &:hover {
-    color: rgb(240, 140, 233);
+    color: #799e79;
     background: #eee;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.2rem;
     font-size: 1.2rem;
   }
 }
@@ -116,6 +116,9 @@ h3 {
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  background: rgba(167, 222, 167, 0.2) ;
+  padding: 1rem;
+  border-radius: 1rem;
 }
 
 .homepage .inner__box .box1 .infobox .topbox,

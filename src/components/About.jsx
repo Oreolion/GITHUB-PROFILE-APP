@@ -102,11 +102,10 @@ const About = () => {
             Go to Github
           </Link>
         </span>
+        <div style={{ color: "goldenrod", textAlign: "center" }}>
+          © 2023 Altschool second semester Examination
+        </div>
       </section>
-
-      <div style={{ color: "goldenrod", textAlign: "center" }}>
-        © 2023 Altschool second semester Examination
-      </div>
     </>
   );
 };
