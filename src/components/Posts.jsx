@@ -15,9 +15,9 @@ function Posts() {
   const fetchUser = async () => {
     try {
       const response = await octokit.request(`GET /users/oreolion/repos`);
-      console.log(response);
+    //   console.log(response);
       const data = await response.data;
-      console.log(data);
+    //   console.log(data);
       setData(data);
     } catch (error) {
       console.log(error);

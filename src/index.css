@@ -36,12 +36,14 @@ article {
 }
 
 h1 {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
+  margin-top: .7rem;
   color: rgb(9, 100, 20);
   font-size: 2.9rem;
   font-weight: bolder;
   text-transform: uppercase;
   font-family: "Courier New", Courier, monospace;
+  line-height: 1.2;
 }
 
 h2 {
@@ -70,11 +72,62 @@ h3 {
   justify-content: center;
   text-align: center;
   min-height: 36rem;
+  max-width: 80%;
+  border: 4px solid #799e79;
+  border-radius: 2rem;
+  margin: 2rem auto;
+}
+
+.homepage .inner__box {
+  display: flex;
+  gap: 6rem;
+}
+
+.homepage .inner__box .box1 {
+  height: 30rem;
+  width: 22rem;
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(167, 200, 167, 0.2);
+  box-shadow: 5px 5px 5px rgba(243, 239, 239, 0.2);
+  margin-bottom: 2rem;
+}
+
+.homepage .inner__box .box1 .imgbox {
+  height: 14rem;
+  width: 14rem;
+  margin-bottom: 1rem;
+}
+
+.homepage .inner__box .box1 .imgbox img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.homepage .inner__box .box1 .infobox {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.homepage .inner__box .box1 .infobox .topbox,
+.homepage .inner__box .box1 .infobox .btmbox {
+  display: flex;
+  gap: 1.3rem;
+  flex-wrap: wrap;
+  width: 16rem;
 }
 
 .homepage > h1 {
   font-weight: bolder;
-  max-width: 30rem;
   text-shadow: 2px 6px 3px rgba(73, 82, 73, 0.4);
 }
 
@@ -88,6 +141,7 @@ h3 {
 .home-trigger-btn {
   text-align: center;
   padding: 10px;
+  cursor: pointer;
   &:hover {
     color: #ccc;
     background-color: #222;
@@ -99,17 +153,21 @@ h3 {
   font-size: 5rem;
   color: pink;
   margin-bottom: 3rem;
+  align-self: center;
 }
 
 .home__link {
   color: #ccc;
   text-decoration: none;
+  background-color: rgba(206, 206, 206, 0.2);
+  padding: 1rem;
+  border-radius: 1rem;
   font-size: 1rem;
   margin-bottom: 4rem;
+  font-weight: bold;
   font-family: monospace;
   &:hover {
-    letter-spacing: 0.3rem;
-    text-decoration: line-through;
+    letter-spacing: 0.1rem;
   }
 }
 
@@ -278,6 +336,10 @@ span {
 }
 
 @media (max-width: 670px) {
+  .homepage .inner__box {
+    flex-direction: column;
+    gap: 2rem;
+  }
   .repo__container {
     display: flex;
     justify-content: center;

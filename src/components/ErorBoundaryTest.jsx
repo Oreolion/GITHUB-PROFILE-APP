@@ -7,7 +7,7 @@ const ErorBoundaryTest = () => {
     throw new Error("This is an unexpected Error...");
   }
   return (
-    <section style={{ padding: 30 }}>
+    <section style={{ padding: 15  }}>
       <button className="home-trigger-btn" onClick={() => setIsError(true)}>
         {" "}
         &#62; Test Error Boundary
